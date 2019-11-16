@@ -1,1 +1,0 @@
-//yoshidaaa!!by nokaaaaaaa
