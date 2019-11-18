@@ -8,17 +8,17 @@ Hitjudg hit;
 void setup() {
   background(#9E959A);
   size(1200, 600);
-  frameRate( 20 );
+  frameRate(20);
   dog = new Yoshida();
   chica = new Chica();
   food = new DarkMatter();
   hit = new Hitjudg();
   chica.setup();
-  
+
   //Load bgm
   file = new SoundFile(this, "gameBgm.mp3");
   file.play();
- 
+
 }
 
 void draw() {
@@ -26,9 +26,9 @@ void draw() {
   food.fooddraw();
   dog.yoshidraw();
   chica.draw();
-  if (hit.judg(dog)){
-  dog = new Yoshida();
-}
+  if (hit.judg(dog)) {
+    dog = new Yoshida();
+  }
   //print(dog.lifetime);
   if (!dog.lifetime) {
     dog = new Yoshida();
@@ -39,11 +39,6 @@ void draw() {
 void keyPressed() {
   final int k = keyCode;
 
-  if (k == 'S')
-    if (looping)  noLoop();
-    else          loop();
-}
-
-boolean tobuyo(){
-  return true;
+  if (k == 'S') if (looping) noLoop();
+  else loop();
 }
