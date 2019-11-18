@@ -17,7 +17,7 @@ Yoshida() {
   x_position = random(0, 800);
   y_position = 0;
   yv = 0;
-  img = loadImage("yoshida.png");
+  img = loadImage( "./images/yoshida.png","png" ); 
   lifetime = true;
  }
 
