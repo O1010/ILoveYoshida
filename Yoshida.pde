@@ -1,7 +1,9 @@
 class Yoshida {
+  //constant
+  int SCREDDN_SIZE = 600;
   //yohida position
-  float x_position;
-  float y_position;
+  float xPosition;
+  float yPosition;
 
   //yoshida y_velocity
   int yv;
@@ -15,22 +17,27 @@ class Yoshida {
   boolean lifetime;
 
   Yoshida() {
-    x_position = random(0, 800);
-    y_position = 0;
+    xPosition = random(0, 800);
+    yPosition = 0;
     yv = 0;
-    url = "./images/yoshida.png";
-    img = loadImage(url, "png");
+
     lifetime = true;
+    url = "./images/yoshida.png";
+    img = loadImage(url, "png");  
   }
 
   void yoshidraw() {
     yv += speed;
-    this.y_position += yv;
-    image(img, this.x_position, this.y_position);
+    this.yPosition += yv;
+    image(img, this.xPosition, this.yPosition);
 
-    if (y_position > 600) {
+    if (yPosition > SCREDDN_SIZE) {
       this.lifetime = false;
     }
+  }
+  
+  boolean isAlive(){
+    return lifetime;
   }
 
 }
