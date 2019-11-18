@@ -15,9 +15,9 @@ void setup() {
 
 void draw() {
   background(#9E959A);
+  food.fooddraw();
   dog.yoshidraw();
   chica.draw();
-  food.fooddraw();
   //print(dog.lifetime);
   if (!dog.lifetime) {
     dog = new Yoshida();

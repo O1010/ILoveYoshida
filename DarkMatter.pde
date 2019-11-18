@@ -8,7 +8,7 @@ class DarkMatter{
   PImage img;
   
   DarkMatter(){
-    x_position = 700;
+    x_position = 850;
     y_position = 200;
     img = loadImage("meuniere .jpeg");    
   }
