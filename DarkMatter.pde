@@ -6,4 +6,14 @@ class DarkMatter{
   
   //DarkMatter image
   PImage img;
+  
+  DarkMatter(){
+    x_position = 1000;
+    y_position = 300;
+    img = loadImage("yoshida.png");
+    
+  }
+  void fooddraw(){
+    image(img, this.x_position, this.y_position);
+  }
 }

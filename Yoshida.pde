@@ -31,8 +31,4 @@ Yoshida() {
     }
   }
   
-  void tachChica(){
-    if 
-  }
-  
 }
