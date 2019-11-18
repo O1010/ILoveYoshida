@@ -1,3 +1,5 @@
+import processing.sound.*;
+SoundFile file;
 Yoshida dog;
 Chica chica;
 DarkMatter food;
@@ -11,6 +13,10 @@ void setup() {
   food = new DarkMatter();
   chica.setup();
   
+  //Load bgm
+  file = new SoundFile(this, "gameBgm.mp3");
+  file.play();
+ 
 }
 
 void draw() {
