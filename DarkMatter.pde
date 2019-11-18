@@ -8,10 +8,9 @@ class DarkMatter{
   PImage img;
   
   DarkMatter(){
-    x_position = 1000;
-    y_position = 300;
-    img = loadImage("yoshida.png");
-    
+    x_position = 700;
+    y_position = 200;
+    img = loadImage("meuniere .jpeg");    
   }
   void fooddraw(){
     image(img, this.x_position, this.y_position);
