@@ -3,6 +3,7 @@ SoundFile file;
 Yoshida dog;
 Chica chica;
 DarkMatter food;
+Hitjudg hit;
 
 void setup() {
   background(#9E959A);
@@ -11,6 +12,7 @@ void setup() {
   dog = new Yoshida();
   chica = new Chica();
   food = new DarkMatter();
+  hit = new Hitjudg();
   chica.setup();
   
   //Load bgm
@@ -24,6 +26,9 @@ void draw() {
   food.fooddraw();
   dog.yoshidraw();
   chica.draw();
+  if (hit.judg(dog)){
+  dog = new Yoshida();
+}
   //print(dog.lifetime);
   if (!dog.lifetime) {
     dog = new Yoshida();
