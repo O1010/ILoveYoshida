@@ -1,17 +1,22 @@
 
 ArrayList<Yoshida> yoshidas;
 
-void draw(){
-  frameRate( 300 );
-}
-
 void setup(){
   background(#9E959A);
   size(600,600);
+  frameRate( 10 );
   yoshidas = new ArrayList<Yoshida>();
-  yoshidas.add(new Yoshida());
+  for (int i=0;i<1;i++){
+      yoshidas.add(new Yoshida());
+      delay(10);
+    }
 
-  for(Yoshida b: yoshidas){
-    b.draw();
+
+}
+
+void draw(){
+  
+  for(Yoshida yoshi: yoshidas){
+    yoshi.draw();
   }
 }
