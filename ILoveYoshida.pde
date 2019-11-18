@@ -29,8 +29,8 @@ void draw() {
   if (hit.judg(dog)) {
     dog = new Yoshida();
   }
-  //print(dog.lifetime);
-  if (!dog.lifetime) {
+
+  if (!dog.isAlive()) {
     dog = new Yoshida();
   }
 }

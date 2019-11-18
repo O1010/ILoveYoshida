@@ -1,6 +1,7 @@
 class Yoshida {
   //constant
   int SCREDDN_SIZE = 600;
+  
   //yohida position
   float xPosition;
   float yPosition;
