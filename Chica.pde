@@ -1,4 +1,3 @@
-//頑張ります。
 PImage photo;
 class Chica{
   void setup()
