@@ -1,18 +1,22 @@
 Yoshida dog;
+Chica chica;
 
 void setup() {
   background(#9E959A);
   size(1200, 600);
   frameRate( 20 );
   dog = new Yoshida();
+  chica = new Chica();
+  chica.setup();
 }
 
 void draw() {
   background(#9E959A);
   dog.yoshidraw();
+  chica.draw();
   //print(dog.lifetime);
   if (!dog.lifetime) {
-    setup();
+    dog = new Yoshida();
   }
 }
 
