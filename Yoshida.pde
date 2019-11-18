@@ -28,8 +28,11 @@ Yoshida() {
 
     if (y_position > 600) {
      this.lifetime = false;
-
     }
+  }
+  
+  void tachChica(){
+    if 
   }
   
 }

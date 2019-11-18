@@ -8,6 +8,7 @@ void setup() {
   dog = new Yoshida();
   chica = new Chica();
   chica.setup();
+  
 }
 
 void draw() {
@@ -27,4 +28,8 @@ void keyPressed() {
   if (k == 'S')
     if (looping)  noLoop();
     else          loop();
+}
+
+boolean tobuyo(){
+  return true;
 }
