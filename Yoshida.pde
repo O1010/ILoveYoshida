@@ -11,35 +11,25 @@ class Yoshida {
  PImage img;
 
  boolean existance;
- boolean lifetime = true;
+ boolean lifetime;
 
 Yoshida() {
   x_position = random(width);
   y_position = 0;
   yv = 0;
   img = loadImage("yoshida.png");
-  existance = false;
   lifetime = true;
  }
 
- void draw() {
+ void yoshidraw() {
    yv += speed;
-
-   if (this.lifetime) {
-    if (existance == false) {
-     image(img, this.x_position, this.y_position);
-     this.y_position += yv;
-     this.existance = true;
-    } else {
-     background(#9E959A);
-      this.existance = false;
-     }
-    }
+   this.y_position += yv;
+   image(img, this.x_position, this.y_position);
 
     if (y_position > 600) {
      this.lifetime = false;
-     background(#9E959A);
-    } 
+
+    }
   }
   
 }
