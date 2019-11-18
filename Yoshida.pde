@@ -9,6 +9,7 @@ class Yoshida {
 
  //yohida imag
  PImage img;
+ String url;
 
  //yoshida live in screen
  boolean lifetime;
@@ -17,7 +18,8 @@ Yoshida() {
   x_position = random(0, 800);
   y_position = 0;
   yv = 0;
-  img = loadImage("yoshida.png");
+  url = "./images/yoshida.png";
+  img = loadImage( url,"png" ); 
   lifetime = true;
  }
 

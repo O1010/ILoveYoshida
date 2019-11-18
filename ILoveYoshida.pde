@@ -1,5 +1,6 @@
 Yoshida dog;
 Chica chica;
+DarkMatter food;
 
 void setup() {
   background(#9E959A);
@@ -7,12 +8,14 @@ void setup() {
   frameRate( 20 );
   dog = new Yoshida();
   chica = new Chica();
+  food = new DarkMatter();
   chica.setup();
   
 }
 
 void draw() {
   background(#9E959A);
+  food.fooddraw();
   dog.yoshidraw();
   chica.draw();
   //print(dog.lifetime);
