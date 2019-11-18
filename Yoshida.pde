@@ -13,7 +13,7 @@ class Yoshida {
  boolean existance;
  boolean lifetime = true;
 
- Yoshida() {
+Yoshida() {
   x_position = random(width);
   y_position = 0;
   yv = 0;
@@ -42,7 +42,4 @@ class Yoshida {
     } 
   }
   
-  boolean isYoshidaAlive(){
-    return this.lifetime;
-  }
 }
