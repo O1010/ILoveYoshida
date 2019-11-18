@@ -1,18 +1,17 @@
 Yoshida dog;
 
-void setup(){
+void setup() {
   background(#9E959A);
-  size(600,600);
+  size(1200, 600);
   frameRate( 20 );
   dog = new Yoshida();
-  
 }
 
-void draw(){
+void draw() {
   background(#9E959A);
   dog.yoshidraw();
   //print(dog.lifetime);
-  if (!dog.lifetime){
+  if (!dog.lifetime) {
     setup();
   }
 }

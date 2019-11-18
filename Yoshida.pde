@@ -10,11 +10,11 @@ class Yoshida {
  //yohida imag
  PImage img;
 
- boolean existance;
+ //yoshida live in screen
  boolean lifetime;
 
 Yoshida() {
-  x_position = random(width);
+  x_position = random(0, 800);
   y_position = 0;
   yv = 0;
   img = loadImage("yoshida.png");
