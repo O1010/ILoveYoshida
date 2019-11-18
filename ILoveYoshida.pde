@@ -8,15 +8,12 @@ void setup(){
   yoshidas = new ArrayList<Yoshida>();
   for (int i=0;i<1;i++){
       yoshidas.add(new Yoshida());
-      delay(10);
     }
-
-
 }
 
 void draw(){
-  
   for(Yoshida yoshi: yoshidas){
     yoshi.draw();
   }
+  
 }
