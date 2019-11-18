@@ -4,11 +4,11 @@ class Chica{
   void setup()
   {
     photo = loadImage( "tika3.png" ); 
-    photo.resize(photo.width/9, photo.height/8); 
+    photo.resize(photo.width/8, photo.height/8); 
   }
 
   void draw()
   {
-    image( photo,mouseX, mouseY);
+    image( photo,mouseX-20, mouseY-50);
   }
 }
