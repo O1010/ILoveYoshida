@@ -6,4 +6,13 @@ class DarkMatter{
   
   //DarkMatter image
   PImage img;
+  
+  DarkMatter(){
+    x_position = 850;
+    y_position = 200;
+    img = loadImage("meuniere .jpeg");    
+  }
+  void fooddraw(){
+    image(img, this.x_position, this.y_position);
+  }
 }
