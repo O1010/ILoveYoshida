@@ -40,5 +40,10 @@ class Yoshida {
   boolean isAlive(){
     return lifetime;
   }
+  
+  void foodTrace(){
+    this.xPosition = lerp(this.xPosition, food.x_position, 1.0);
+    this.yPosition = lerp(this.yPosition, food.y_position, 1.0);
+  }
 
 }

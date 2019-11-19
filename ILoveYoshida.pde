@@ -1,5 +1,9 @@
-import processing.sound.*;
-SoundFile file;
+import ddf.minim.*;
+
+Minim minim;
+AudioPlayer song;
+
+//SoundFile song;
 Yoshida dog;
 Chica chica;
 DarkMatter food;
@@ -16,23 +20,29 @@ void setup() {
   chica.setup();
 
   //Load bgm
-  file = new SoundFile(this, "gameBgm.mp3");
-  file.play();
+  minim = new Minim(this);
+  song = minim.loadFile("gameBgm.mp3");
+  song.loop();
 
 }
 
 void draw() {
   background(#9E959A);
+
+  //item draw
   food.fooddraw();
   dog.yoshidraw();
   chica.draw();
+  
   if (hit.judg(dog)) {
-    dog = new Yoshida();
+    dog.foodTrace();
   }
 
   if (!dog.isAlive()) {
     dog = new Yoshida();
   }
+  
+
 }
 
 //for confirm moving
