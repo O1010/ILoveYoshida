@@ -13,12 +13,11 @@ Hitjudg hit;
 SceneManager mg;
 
 int score;
-
+int second;
 void setup() {
   size(1200, 600);
   textSize(32);
   frameRate(30);
-  //thread("mg.timer()");
   
   dog = new Yoshida();
   chica = new Chica();
@@ -36,8 +35,8 @@ void setup() {
 
 void draw() {
   startScene();
+  second = millis()/1000;
   mg.timer();
-  
   mg.displayTimer();
 
   //item draw
@@ -65,13 +64,12 @@ void startScene(){
   String url="./images/test.png";
   
   countFirst = loadImage(url, "png");
-    if(mg.counter>25){
+    if(mg.counter>15){
     image(countFirst,0,0);
   }else if(mg.counter>0){
     background(#fcc0e9);
   }else{
     background(#9E959A);
-    
   }
 }
 

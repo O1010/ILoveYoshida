@@ -1,19 +1,20 @@
 class SceneManager{
   int counter;
   int endTime;
-  
   SceneManager(){
-    counter=30;
+    counter=20;
     endTime=0;
+
   }
   
   void timer(){
     delay(10);
     if(this.counter > this.endTime){
-      counter--;
+      counter = 20 - second;
     }else if (counter==0){
       text("score", 500, 300);
       text(score, 600, 300);
+      
       noLoop();
     }
   }
@@ -22,7 +23,8 @@ class SceneManager{
     if(this.counter > this.endTime){
       text(mg.counter, 50, 50);
     }else{
-      text("おわり", 50, 50);
+      text("Fish!!", 50, 50);
     }
   }
+  
 }
