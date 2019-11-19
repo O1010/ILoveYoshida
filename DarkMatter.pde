@@ -14,6 +14,7 @@ class DarkMatter {
     url = "./images/meuniere.jpeg";
     img = loadImage(url, "jpeg");
   }
+  
   void fooddraw() {
     image(img, this.x_position, this.y_position);
   }
