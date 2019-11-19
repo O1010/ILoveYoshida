@@ -41,7 +41,6 @@ void draw() {
   if (!dog.isAlive()) {
     dog = new Yoshida();
   }
-  
 
 }
 
