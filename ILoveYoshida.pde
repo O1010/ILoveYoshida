@@ -49,10 +49,9 @@ void draw() {
     score++;
   }
 
-  if (!dog.isAlive()) {
+  if (!dog.isAlive() && !mg.isEndGame()) {
     dog = new Yoshida();
   }
-
 }
 
 
@@ -64,7 +63,7 @@ void startScene(){
   String url="./images/test.png";
   
   countFirst = loadImage(url, "png");
-    if(mg.counter>15){
+    if(mg.counter>18){
     image(countFirst,0,0);
   }else if(mg.counter>0){
     background(#fcc0e9);

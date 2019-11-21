@@ -1,21 +1,21 @@
 class Yoshida {
   //constant
-  int SCREDDN_SIZE = 600;
+  private int SCREDDN_SIZE = 600;
   
   //yohida position
-  float xPosition;
-  float yPosition;
+  private float xPosition;
+  private float yPosition;
 
   //yoshida y_velocity
-  int yv;
-  float speed = 9.8;
+  private int yv;
+  private float speed = 9.8;
 
-  //yohida imag
-  PImage img;
-  String url;
+  //yohida image
+  private PImage img;
+  private String url;
 
   //yoshida live in screen
-  boolean lifetime;
+  private boolean lifetime;
 
   Yoshida() {
     xPosition = random(0, 800);

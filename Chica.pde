@@ -12,4 +12,5 @@ class Chica {
   void draw() {
     image(photo, mouseX - 20, mouseY - 50);
   }
+
 }
