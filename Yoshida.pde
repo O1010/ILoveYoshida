@@ -22,7 +22,7 @@ class Yoshida {
 
     lifetime = true;
     url = "./images/yoshida.png";
-    img = loadImage(url, "png");  
+    img = loadImage(url, "png");
   }
 
   void yoshidraw() {
@@ -34,14 +34,13 @@ class Yoshida {
       this.lifetime = false;
     }
   }
-  
-  boolean isAlive(){
+
+  boolean isAlive() {
     return lifetime;
   }
-  
-  void foodTrace(){
+
+  void foodTrace() {
     this.xPosition = lerp(this.xPosition, food.x_position, 1.0);
     this.yPosition = lerp(this.yPosition, food.y_position, 1.0);
   }
-
 }

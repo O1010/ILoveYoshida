@@ -2,7 +2,7 @@ class Chica {
 
   PImage photo;
   String url;
-  
+
   Chica() {
     url = "./images/tika3.png";
     photo = loadImage(url, "png");
@@ -12,5 +12,4 @@ class Chica {
   void draw() {
     image(photo, mouseX - 20, mouseY - 50);
   }
-
 }
