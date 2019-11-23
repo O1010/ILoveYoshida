@@ -1,7 +1,16 @@
 import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.ugens.*;
+import ddf.minim.effects.*;
+import ddf.minim.spi.*;
+import ddf.minim.signals.*;
 
 Minim minim;
 AudioPlayer song;
+GraficEqualizer eq;
+
+AudioInput  in;
+FFT fft;
 
 //characterConstracter
 Yoshida dog;
@@ -33,6 +42,8 @@ void setup() {
   song = minim.loadFile("gameBgm.mp3");
   song.loop();
   
+  eq = new GraficEqualizer();
+  
 }
 
 void draw() {
@@ -40,9 +51,10 @@ void draw() {
   second = millis()/1000;
   mg.timer();
   mg.displayTimer();
+  
+  eq.drawEqualize();
 
   //item draw
-  food.fooddraw();
   dog.yoshidraw();
   chica.draw();
   
@@ -69,6 +81,7 @@ void startScene(){
     image(countFirst,0,0);
   }else if(mg.counter>0){
     background(#fcc0e9);
+    food.fooddraw();
   }else{
     background(#9E959A);
   }
