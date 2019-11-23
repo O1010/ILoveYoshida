@@ -1,5 +1,5 @@
 class Hitjudg {
-  int DISTANCE = 150;
+  final int DISTANCE = 150;
   float judg_x,
   judg_y,
   judg_distance;

@@ -1,5 +1,5 @@
 import ddf.minim.*;
-//SoundFile song;
+
 Minim minim;
 AudioPlayer song;
 
@@ -14,6 +14,9 @@ SceneManager mg;
 
 int score;
 int second;
+//constant
+final int SCREDDN_YSIZE = 600;
+  
 void setup() {
   size(1200, 600);
   textSize(32);
@@ -24,7 +27,6 @@ void setup() {
   food = new DarkMatter();
   hit = new Hitjudg();
   mg = new SceneManager();
-  chica.setup();
 
   //Load bgm
   minim = new Minim(this);

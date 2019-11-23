@@ -1,7 +1,5 @@
 class Yoshida {
-  //constant
-  private int SCREDDN_SIZE = 600;
-  
+
   //yohida position
   private float xPosition;
   private float yPosition;
@@ -18,7 +16,7 @@ class Yoshida {
   private boolean lifetime;
 
   Yoshida() {
-    xPosition = random(0, 800);
+    xPosition = random(0, 700);
     yPosition = 0;
     yv = 0;
 
@@ -32,7 +30,7 @@ class Yoshida {
     this.yPosition += yv;
     image(img, this.xPosition, this.yPosition);
 
-    if (yPosition > SCREDDN_SIZE) {
+    if (yPosition > SCREDDN_YSIZE) {
       this.lifetime = false;
     }
   }

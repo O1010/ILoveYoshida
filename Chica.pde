@@ -3,7 +3,7 @@ class Chica {
   PImage photo;
   String url;
   
-  void setup() {
+  Chica() {
     url = "./images/tika3.png";
     photo = loadImage(url, "png");
     photo.resize(photo.width / 8, photo.height / 8);
