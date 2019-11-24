@@ -1,8 +1,8 @@
 class Hitjudg {
-  int DISTANCE = 150;
-  float judg_x,
-  judg_y,
-  judg_distance;
+  final int DISTANCE = 100;
+  float judg_x, 
+    judg_y, 
+    judg_distance;
 
   boolean judg(Yoshida dog) {
     float yoshi_x = dog.xPosition;
@@ -14,6 +14,15 @@ class Hitjudg {
       return true;
     } else {
       return false;
+    }
+  }
+
+  void hitJudg() {
+    if (this.judg(dog)) {
+      dog.foodTrace();
+      swish.play();
+      swish.rewind();
+      score++;
     }
   }
 }
