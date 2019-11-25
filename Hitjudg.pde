@@ -17,9 +17,11 @@ class Hitjudg {
     }
   }
 
-  void hitJudg() {
+  void hitJudg(Yoshida dog) {
     if (this.judg(dog)) {
-      dog.foodTrace();
+      if(!dog.toFood){
+        dog.settoFood(true);
+      }
       swish.play();
       swish.rewind();
       score++;
