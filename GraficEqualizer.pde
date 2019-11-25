@@ -13,15 +13,12 @@ class GraficEqualizer {
     colorMode(HSB, specSize, 100, 100);
   }
   void drawEqualize() {
-    fft.forward(in.left);
+    fft.forward(in.mix);
     for (int i = 0; i < specSize; i++)
     {
       float band = fft.getBand(i);
-      println("band"+band);
       fftSmooth[i] *= 0.8;
-      println("fft"+fftSmooth[i]);
       if (fftSmooth[i] < band) fftSmooth[i] = band;
-      println("fft"+fftSmooth[i]);
       stroke(i, 100, 100);
       strokeWeight(5);
       line( i*5, height, i*5, height - fftSmooth[i]*100 );
