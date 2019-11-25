@@ -8,7 +8,8 @@ import ddf.minim.signals.*;
 Minim minim;
 AudioPlayer song;
 AudioPlayer swish;
- 
+AudioPlayer finish;
+
 GraficEqualizer eq;
 AudioInput  in;
 FFT fft;
@@ -44,6 +45,7 @@ void setup() {
   song.play();
   //Load SE
   swish = minim.loadFile("Swish.mp3");
+  finish = minim.loadFile("finish.mp3");
 
   eq = new GraficEqualizer();
 }

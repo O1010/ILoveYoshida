@@ -45,6 +45,7 @@ class SceneManager {
       chica.draw();
     } else {
       noCursor();
+      finish.play();
       background(#9E959A);
     }
   }
