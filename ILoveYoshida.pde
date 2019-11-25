@@ -8,8 +8,8 @@ import ddf.minim.signals.*;
 Minim minim;
 AudioPlayer song;
 AudioPlayer swish;
+ 
 GraficEqualizer eq;
-
 AudioInput  in;
 FFT fft;
 
@@ -49,14 +49,12 @@ void setup() {
 }
 
 void draw() {
-  //startScene();
   mg.displayScene();
   second = millis()/1000;
   mg.timer();
   mg.displayTimer();
 
   eq.drawEqualize();
-
   hit.hitJudg();
 }
 

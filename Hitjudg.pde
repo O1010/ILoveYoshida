@@ -18,7 +18,7 @@ class Hitjudg {
   }
 
   void hitJudg() {
-    if (this.judg(dog)) {
+    if (this.judg(dog) && mg.counter<20 &&mg.counter>0) {
       dog.foodTrace();
       swish.play();
       swish.rewind();
