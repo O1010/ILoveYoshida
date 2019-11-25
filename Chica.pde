@@ -1,15 +1,21 @@
-class Chica {
+import gifAnimation.*;
 
-  PImage photo;
-  String url;
-
-  Chica() {
-    url = "./images/tika3.png";
-    photo = loadImage(url, "png");
-    photo.resize(photo.width / 8, photo.height / 8);
+class Chica{
+  Gif myAnimation;
+  String path;
+  
+  Chica(){
+    path = "./images/Chica.gif";
+  }
+  
+  void setup(PApplet parent)
+  {
+  myAnimation = new Gif(parent, path);
+  myAnimation.loop(); 
   }
 
-  void draw() {
-    image(photo, mouseX - 20, mouseY - 50);
+  void draw()
+  {
+   image( myAnimation,mouseX-20, mouseY-50);
   }
 }

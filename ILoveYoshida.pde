@@ -37,6 +37,8 @@ void setup() {
   food = new DarkMatter();
   hit = new Hitjudg();
   mg = new SceneManager();
+  
+  chica.setup(this);
 
   //Load bgm
   minim = new Minim(this);
